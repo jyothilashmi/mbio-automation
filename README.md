@@ -48,6 +48,9 @@ mvn test
 ### 4. View Test Reports
 ExtentReports HTML reports are generated in the reports/ directory.
 
+# Task 2 Doc 
+Uploaded Task 2 Doc - includes the scenario based 5 answers , Test Plan, Risk Matrix and Release Readiness Checklists.
+
 ## Contact
 Jyothi Lakshmi
 Email: jyothilakshmisree04@gmail.com
