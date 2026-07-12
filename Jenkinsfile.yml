@@ -1,0 +1,112 @@
+pipeline {
+    agent any
+
+    triggers {
+        // Regression suite daily at 2 AM GST time
+        cron('0 2 * * *')
+    }
+
+    stages {
+
+        stage('Checkout Code') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Setup JDK') {
+            steps {
+                sh 'java -version || true'
+            }
+        }
+
+        stage('Install Chrome') {
+            steps {
+                sh '''
+                sudo apt-get update
+                sudo apt-get install -y wget gnupg
+                wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+                sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+                sudo apt-get update
+                sudo apt-get install -y google-chrome-stable
+                '''
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                script {
+                    if (env.GIT_COMMIT != null && env.GIT_PREVIOUS_SUCCESSFUL_COMMIT != env.GIT_COMMIT) {
+                        pipeline {
+    agent any
+
+    triggers {
+        // Regression suite daily at 2 AM UAE time
+        cron('0 2 * * *')
+    }
+
+    stages {
+
+        stage('Checkout Code') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Setup JDK') {
+            steps {
+                sh 'java -version || true'
+            }
+        }
+
+        stage('Install Chrome') {
+            steps {
+                sh '''
+                sudo apt-get update
+                sudo apt-get install -y wget gnupg
+                wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+                sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+                sudo apt-get update
+                sudo apt-get install -y google-chrome-stable
+                '''
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                script {
+                    if (env.GIT_COMMIT != null && env.GIT_PREVIOUS_SUCCESSFUL_COMMIT != env.GIT_COMMIT) {
+                        // Smoke suite exceute on push
+                        sh 'mvn clean test -Psmoke'
+                    } else {
+                        // Regression suite on schedule
+                        sh 'mvn clean test -Pregression'
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'target/surefire-reports/**/*', fingerprint: true
+        }
+    }
+}
+
+                        sh 'mvn clean test -Psmoke'
+                    } else {
+                        // Regression suite on schedule
+                        sh 'mvn clean test -Pregression'
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'target/surefire-reports/**/*', fingerprint: true
+        }
+    }
+}

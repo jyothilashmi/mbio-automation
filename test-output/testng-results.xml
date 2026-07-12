@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-07-12T13:56:42 GST" name="Suite" finished-at="2026-07-12T13:57:15 GST" duration-ms="33390">
+    <groups>
+    </groups>
+    <test started-at="2026-07-12T13:56:42 GST" name="MBIO Regression Tests" finished-at="2026-07-12T13:57:15 GST" duration-ms="33390">
+      <class name="com.mbio.mbio_automation.tests.NavigationTests">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.mbio.mbio_automation.tests.NavigationTests@78e4deb0]" started-at="2026-07-12T13:56:42 GST" name="setUp" finished-at="2026-07-12T13:56:47 GST" duration-ms="5853" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.mbio.mbio_automation.tests.NavigationTests.setMobileViewport()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="setMobileViewport()[pri:0, instance:com.mbio.mbio_automation.tests.NavigationTests@78e4deb0]" started-at="2026-07-12T13:56:47 GST" name="setMobileViewport" finished-at="2026-07-12T13:56:49 GST" duration-ms="1272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setMobileViewport -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.mbio.mbio_automation.tests.NavigationTests@78e4deb0]" started-at="2026-07-12T13:56:49 GST" name="tearDown" finished-at="2026-07-12T13:56:49 GST" duration-ms="566" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=setMobileViewport status=SUCCESS method=NavigationTests.setMobileViewport()[pri:0, instance:com.mbio.mbio_automation.tests.NavigationTests@78e4deb0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.mbio.mbio_automation.tests.NavigationTests@78e4deb0]" started-at="2026-07-12T13:56:49 GST" name="setUp" finished-at="2026-07-12T13:56:56 GST" duration-ms="6284" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.mbio.mbio_automation.tests.NavigationTests.verifyHeaderNavigation()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyHeaderNavigation()[pri:0, instance:com.mbio.mbio_automation.tests.NavigationTests@78e4deb0]" started-at="2026-07-12T13:56:56 GST" name="verifyHeaderNavigation" finished-at="2026-07-12T13:57:08 GST" duration-ms="12680" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeaderNavigation -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.mbio.mbio_automation.tests.NavigationTests@78e4deb0]" started-at="2026-07-12T13:57:08 GST" name="tearDown" finished-at="2026-07-12T13:57:09 GST" duration-ms="816" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyHeaderNavigation status=SUCCESS method=NavigationTests.verifyHeaderNavigation()[pri:0, instance:com.mbio.mbio_automation.tests.NavigationTests@78e4deb0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.mbio.mbio_automation.tests.NavigationTests@78e4deb0]" started-at="2026-07-12T13:57:09 GST" name="setUp" finished-at="2026-07-12T13:57:14 GST" duration-ms="4705" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.mbio.mbio_automation.tests.NavigationTests.verifyNavigationDesktopView()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyNavigationDesktopView()[pri:0, instance:com.mbio.mbio_automation.tests.NavigationTests@78e4deb0]" started-at="2026-07-12T13:57:14 GST" name="verifyNavigationDesktopView" finished-at="2026-07-12T13:57:15 GST" duration-ms="839" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNavigationDesktopView -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.mbio.mbio_automation.tests.NavigationTests@78e4deb0]" started-at="2026-07-12T13:57:15 GST" name="tearDown" finished-at="2026-07-12T13:57:15 GST" duration-ms="314" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyNavigationDesktopView status=SUCCESS method=NavigationTests.verifyNavigationDesktopView()[pri:0, instance:com.mbio.mbio_automation.tests.NavigationTests@78e4deb0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.mbio.mbio_automation.tests.NavigationTests -->
+    </test> <!-- MBIO Regression Tests -->
+  </suite> <!-- Suite -->
+</testng-results>
