@@ -6,7 +6,8 @@ This is a TDD-style test automation framework for an mbio trading website, built
 - Test-Driven Development (TDD) with TestnG 
 - Selenium WebDriver for browser automation  
 - Data-driven testing using Excel sheets  
-- Hybrid - Page Object Model (POM) and Component Object Model design patterns for maintainability  
+- Hybrid - Page Object Model (POM) and Component Object Model design patterns for maintainability. Reusable,common components eg: Navigation elements and related actions are created independently using COM concepts to increase readability and scalability. This helps to avoid duplication in each page objects.Non repeated full page eg: About US page is designed using POM concepts.
+- Independent wait utils,config utils,data utils created to avoid large common utils single file.  
 - Configurable environment setup  
 - ExtentReports integration for rich HTML test reports
 - Excel sheet support for data integration
